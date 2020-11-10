@@ -1,0 +1,125 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.2'
+    id 'maven'
+    id 'java-library'
+    id 'idea'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation('org.codehaus.groovy:groovy-all:2.3.11')
+    implementation('org.slf4j:slf4j-api:1.7.21')
+
+    /**
+     * JUNIT
+     *
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-migrationsupport
+     * https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-migration-support
+     */
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.7.0')
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.7.0')
+    testImplementation('org.junit.jupiter:junit-jupiter-params:5.7.0')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.7.0')
+    testImplementation('org.junit.jupiter:junit-jupiter-migrationsupport:5.7.0')
+    implementation('org.junit.jupiter:junit-jupiter-migration-support:5.0.0-M4')
+    /**
+     * Brownies Collections complements the Java Collections Framework.
+     * GapList combines the strengths of both ArrayList and LinkedList.
+     * BigList is a list optimized for storing large number of elements.
+     * There are specialized List implementations for all primitive data types.
+     * The key collection classes offer support for keys and constraints for lists and collections.
+     *
+     * http://www.magicwerk.org/collections
+     * https://mvnrepository.com/artifact/org.magicwerk/brownies-collections
+     */
+
+    implementation('org.magicwerk:brownies-collections:0.9.14')
+
+    /**
+     * fastutil extends the Java Collections Framework by providing type-specific
+     * maps, sets, lists and priority queues with a small memory footprint and fast
+     * access and insertion; provides also big (64-bit) arrays, sets and lists, and
+     * fast, practical I/O classes for binary and text files.
+     *
+     * 	http://fastutil.di.unimi.it/
+     */
+    // https://mvnrepository.com/artifact/it.unimi.dsi/fastutil
+
+    implementation('it.unimi.dsi:fastutil:8.4.3')
+
+    /**
+     * Efficient Java collections for primitive integer types
+     */
+    // https://mvnrepository.com/artifact/com.almworks.integers/integers
+
+    implementation('com.almworks.integers:integers:1.1.2')
+
+    /**
+     * Library providing immutable/persistent collection classes for Java.
+     * While collections are immutable they provide methods for adding and
+     * removing values by creating new modified copies of themselves. Each
+     * copy shares almost all of its structure with other copies to minimize
+     * memory consumption.
+     *
+     * https://github.com/brianburton/java-immutable-collections
+     * https://mvnrepository.com/artifact/org.javimmutable/javimmutable-collections
+     */
+
+    implementation('org.javimmutable:javimmutable-collections:3.1.0')
+
+    /**
+     * Apache Derby is an open source relational database implemented entirely in Java.
+     *
+     * Apache Derby Client JDBC Driver
+     * The Derby client JDBC driver, used to connect to a Derby server over a network connection.
+     *
+     * Apache Derby Network Server
+     * Contains the Apache Derby network server, which allows remote clients to connect to Derby databases over a network connection using the Derby client JDBC driver.
+     *
+     * Apache Derby Tools
+     * Contains Apache Derby tools like ij, sysinfo, and dblook.
+     *
+     * Apache Derby Optional Tools
+     * Contains optional tools for use with Derby.
+     *
+     * Apache Derby Network Server Admin Demonstration Servlet
+     * A demonstration network servlet (WAR) showcasing Derby Network Server administration. Not for production use.
+     *
+     * Apache Derby Messages: German
+     * Localized (German) messages for Apache Derby
+     *
+     * Apache Derby Project
+     * Apache Derby is an open source relational database implemented entirely in Java.
+     *
+     * https://mvnrepository.com/artifact/org.apache.derby/derby
+     */
+
+    testImplementation('org.apache.derby:derby:10.15.2.0')
+    implementation('org.apache.derby:derbyclient:10.15.2.0')
+    implementation('org.apache.derby:derbynet:10.15.2.0')
+    implementation('org.apache.derby:derbytools:10.15.2.0')
+    implementation('org.apache.derby:derbyoptionaltools:10.15.2.0')
+    implementation('org.apache.derby:derbyLocale_de_DE:10.15.2.0')
+    implementation('org.apache.derby:derby-project:10.15.2.0')
+
+    /**
+     * SQL Generator
+     */
+
+    implementation 'org.java-sql-generator:org.java-sql-generator:0.3.2'
+}
