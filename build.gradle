@@ -1,0 +1,60 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+    id 'java'
+    id 'idea'
+    id 'groovy'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    // Use JCenter for resolving dependencies.
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    // Use JUnit Jupiter API for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:29.0-jre'
+
+    /**
+     *
+     */
+
+    testImplementation 'org.dbunit:dbunit:2.7.0'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    implementation 'org.slf4j:slf4j-ext:2.0.0-alpha1'
+    testImplementation 'org.slf4j:slf4j-log4j12:2.0.0-alpha1'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha1'
+    implementation 'org.slf4j:slf4j-android:1.7.30'
+    testImplementation 'org.slf4j:slf4j-jcl:1.7.30'
+    implementation 'org.slf4j:slf4j-ext:2.0.0-alpha1'
+    testImplementation 'org.slf4j:slf4j-nop:2.0.0-alpha1'
+    testImplementation 'org.slf4j:slf4j-jdk14:2.0.0-alpha1'
+    implementation 'org.slf4j:log4j-over-slf4j:2.0.0-alpha1'
+    implementation 'org.slf4j:jul-to-slf4j:2.0.0-alpha1'
+    implementation 'org.slf4j:jcl-over-slf4j:2.0.0-alpha1'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.0-alpha1'
+    testImplementation 'org.slf4j:slf4j-log4j12:2.0.0-alpha1'
+    testImplementation 'org.slf4j:integration:2.0.0-alpha1'
+    implementation 'org.slf4j:slf4j-site:2.0.0-alpha1'
+    implementation 'org.slf4j:slf4j-log4j13:1.0.1'
+    implementation 'org.slf4j:slf4j-parent:2.0.0-alpha1@pom'
+    implementation 'org.slf4j:slf4j-migrator:1.8.0-beta4'
+
+    /**
+     * ASAP
+     */
+    // https://mvnrepository.com/artifact/net.sharksystem/sharkfw-core: implementation('net.sharksystem:sharkfw-core:2.9.4')
+    implementation 'com.github.SharedKnowledge:SharkFW:master'
+
+}
